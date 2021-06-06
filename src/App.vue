@@ -1,6 +1,6 @@
 <template>
   <div id="container">
-    <Header></Header>
+    <Header />
     <router-view />
     <Footer />
   </div>
@@ -17,7 +17,7 @@ export default {
 
 <style lang="scss">
 html {
-overflow-y: auto;
+  overflow-y: auto;
 
   #container {
     display: flex;
@@ -26,5 +26,4 @@ overflow-y: auto;
     justify-content: space-between;
   }
 }
-
 </style>

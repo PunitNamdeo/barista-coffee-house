@@ -1,7 +1,10 @@
 <template>
   <div class="menu container">
     <div class="prices">
-      <div v-if="prices" class="beverages has-text-centered has-text-weight-bold">
+      <div
+        v-if="prices"
+        class="beverages has-text-centered has-text-weight-bold"
+      >
         Beverages
       </div>
       <ul class="drink-list">
@@ -48,7 +51,7 @@ export default {
   width: 100%;
 
   .beverages {
-    background-color: #00947e ;
+    background-color: #00947e;
     color: white;
     padding: 8px;
     margin: 15px 0 15px 0;

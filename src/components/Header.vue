@@ -28,17 +28,22 @@
         v-bind:class="[isActive ? 'is-active' : null]"
       >
         <div class="navbar-end">
-          <router-link to="/" class="navbar-item pr-4">
+          <router-link
+            to="/"
+            class="navbar-item pr-4"
+            :class="[onLoadActive ? 'active-on-load' : null]"
+          >
             <div class="icon-label">
-              <img src="../assets/icons/coffee.svg" />
+              <img src="../assets/icons/coffee.svg" />Beverages
             </div>
             <span class="label-header">Beverages</span>
           </router-link>
 
           <router-link to="/calculations" class="navbar-item pr-4">
             <div class="icon-label">
-              <img src="../assets/icons/shopping-bag.svg" />
+              <img src="../assets/icons/shopping-bag.svg" />Calculation
             </div>
+
             <span class="label-header">Calculation</span>
           </router-link>
         </div>
@@ -72,7 +77,14 @@ export default {
   data() {
     return {
       isActive: false,
+      onLoadActiveClass: true,
     };
+  },
+  computed: {
+    onLoadActive() {
+      // eslint-disable-next-line vue/no-side-effects-in-computed-properties
+      return this.$route.path === "/calculations" ? (this.onLoadActiveClass = false) : (this.onLoadActiveClass = true);
+    },
   },
   methods: {
     onActive() {
@@ -87,8 +99,8 @@ export default {
   max-height: 3.5rem;
 }
 .icon-label {
-  width: 25px;
-  height: 25px;
+  width: 75px;
+  height: 50px;
 }
 .hero-logo {
   margin-left: 10px;
@@ -101,6 +113,10 @@ export default {
 a.navbar-item:focus-within,
 a.navbar-item:hover {
   color: #000000;
+}
+
+.active-on-load {
+  background-color: #fafafa;
 }
 
 @media screen and (max-width: 1024px) {

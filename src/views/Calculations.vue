@@ -1,7 +1,9 @@
 <template>
   <div class="container">
     <div class="order">
-      <div class="calculations has-text-centered has-text-weight-bold">Calculations</div>
+      <div class="calculations has-text-centered has-text-weight-bold">
+        Calculations
+      </div>
       <ul class="client__heading has-text-weight-semibold">
         <li>Name</li>
         <li>Orders</li>
@@ -53,7 +55,7 @@ export default {
   width: 100%;
 
   .calculations {
-    background-color: #00947e ;
+    background-color: #00947e;
     color: white;
     padding: 8px;
     margin: 15px 0 15px 0;

@@ -1,6 +1,6 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
-const Prices = () => import("../views/Beverages.vue");
+const Beverages = () => import("../views/Beverages.vue");
 const Calculations = () => import("../views/Calculations.vue");
 
 Vue.use(VueRouter);
@@ -8,8 +8,8 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "Prices",
-    component: Prices,
+    name: "Beverages",
+    component: Beverages,
   },
   {
     path: "/calculations",

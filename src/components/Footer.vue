@@ -3,7 +3,12 @@
     <div class="content has-text-centered">
       <p>
         <strong>Barista Coffee House</strong> by
-        <a class="has-text-weight-bold ref-link" target="_blank" href="https://github.com/PunitNamdeo">Punit Namdeo</a>
+        <a
+          class="has-text-weight-bold ref-link"
+          target="_blank"
+          href="https://github.com/PunitNamdeo"
+          >Punit Namdeo</a
+        >
       </p>
     </div>
   </footer>
