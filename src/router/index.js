@@ -4,7 +4,9 @@ const Beverages = () => import("../views/Beverages.vue");
 const Calculations = () => import("../views/Calculations.vue");
 
 Vue.use(VueRouter);
-
+/**
+ * To route on mentioned path with history mode.
+ */
 const routes = [
   {
     path: "/",

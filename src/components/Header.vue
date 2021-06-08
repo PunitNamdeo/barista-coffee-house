@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!--  navigation based on the default and user selection route  -->
     <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="navbar-brand">
         <router-link class="navbar-item" to="/">
@@ -49,6 +50,7 @@
         </div>
       </div>
     </nav>
+    <!-- To display the Barista coffee content and with nice background image  -->
     <div class="menu container">
       <div class="header-coffee">
         <span class="label-hero">Think coffee</span>
@@ -72,6 +74,10 @@
 </template>
 
 <script>
+/**
+ * The Header component.
+ * To provide the responsive navigation with some barista coffee content.
+ */
 export default {
   name: "Header",
   data() {
@@ -81,12 +87,18 @@ export default {
     };
   },
   computed: {
+    /**
+     * To display the default selection of navigation on page load.
+     */
     onLoadActive() {
       // eslint-disable-next-line vue/no-side-effects-in-computed-properties
       return this.$route.path === "/calculations" ? (this.onLoadActiveClass = false) : (this.onLoadActiveClass = true);
     },
   },
   methods: {
+    /**
+     * To set the isActive flag for responsiveness navigation.
+     */
     onActive() {
       this.isActive = !this.isActive;
     },
@@ -119,6 +131,7 @@ a.navbar-item:hover {
   background-color: #fafafa;
 }
 
+/* media query for the device max-width 1024px */
 @media screen and (max-width: 1024px) {
   .icon-label {
     display: none;
@@ -181,7 +194,7 @@ a.navbar-item:hover {
     text-align: center;
   }
 }
-
+/* media query for the device max-width 740px */
 @media screen and (max-width: 740px) {
   .header {
     h2 {

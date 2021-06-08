@@ -7,6 +7,7 @@
       >
         Beverages
       </div>
+      <!-- To display the coffee drinks with sizes and price -->
       <ul class="drink-list">
         <li :key="index" v-for="(drink, index) in prices" class="drink">
           <div class="name has-text-weight-semibold">
@@ -30,6 +31,9 @@
 <script>
 import { mapState, mapActions } from "vuex";
 
+/**
+ * To display the list view of beverages with size and price built Beverages view
+ */
 export default {
   name: "Prices",
   computed: {
@@ -39,6 +43,7 @@ export default {
     ...mapActions(["getPrices"]),
   },
   mounted() {
+    // call the getPrices() on view load
     this.getPrices();
   },
 };

@@ -1,5 +1,9 @@
 import axios from "axios";
 
+/**
+ * state management library: Vuex
+ * handling asynchronous service call with help of Axios library
+ */
 const state = {
   orders: [],
   payments: [],
@@ -18,6 +22,9 @@ const mutations = {
   },
 };
 const actions = {
+  /**
+   * fetch the response of prices service and commit the service response
+   */
   async getPrices({ commit }) {
     try {
       const response = await axios.get("http://localhost:5000/prices");
@@ -27,6 +34,10 @@ const actions = {
     }
   },
 
+  /**
+   * fetch the response of payments service and commit the service response
+   * calculate the amount of coffee which has been purchased by each user
+   */
   async getPayments({ commit }) {
     try {
       const response = await axios.get("http://localhost:5000/payments");
@@ -52,6 +63,10 @@ const actions = {
     }
   },
 
+  /**
+   * fetch the response of orders service and commit the service response
+   * calculate the ordered coffee by each user and based on payment received calculate owed amount by each user
+   */
   async getOrders({ state, commit, dispatch }) {
     await dispatch("getPrices");
     await dispatch("getPayments");

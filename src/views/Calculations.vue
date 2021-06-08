@@ -11,6 +11,8 @@
         <li>Balance</li>
         <li>Owed</li>
       </ul>
+      <!--  To display the list view of each user-  Amount of ordered coffee, paid amount,
+      remaining balance and based on that owed condition  -->
       <ul class="clients has-text-weight-semibold">
         <li :key="key" v-for="(order, key) in orders">
           <div class="client">
@@ -31,6 +33,9 @@
 <script>
 import { mapState, mapActions } from "vuex";
 
+/**
+ * To display the final calculation based on amount paid of coffee by each user and purchased coffee.
+ */
 export default {
   name: "Calculations",
   computed: {
@@ -43,6 +48,9 @@ export default {
     },
   },
   mounted() {
+    /**
+     * call the getOrders() on view load
+     */
     this.getOrders();
   },
 };

@@ -15,6 +15,10 @@
 </template>
 
 <script>
+/**
+ * The Footer component.
+ * To redirect to the author git hub account
+ */
 export default {
   name: "Footer",
 };

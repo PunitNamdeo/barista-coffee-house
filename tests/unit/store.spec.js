@@ -6,7 +6,11 @@ import axios from "axios";
 const localVue = createLocalVue();
 localVue.use(Vuex);
 
-describe("Barista Coffee Shop - unit test cases of state management with service call", () => {
+/**
+ * To demonstrate the unit testing of store/index.js file.
+ * Handle the asynchronous service call inside state management
+ */
+describe("Barista Coffee Shop - unit test cases of asynchronous service call inside state management", () => {
   let store;
 
   beforeEach(() => {

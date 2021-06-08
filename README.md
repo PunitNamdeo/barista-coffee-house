@@ -58,7 +58,7 @@ We've got the following data
 - State management library `Vuex`.
 - Promise based HTTP client for the browser and node.js `Axios`.  
 - CSS framework `Bulma` responsive web design.
-- Load the JSONs asynchronously by hosting on a local `Express.js or Express` back end web application framework for Node.js server.
+- Load the JSONs asynchronously by hosting on a local `Express.js or Express` back end web application framework of Node.js server.
 
 ## Testing
 
