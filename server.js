@@ -1,8 +1,8 @@
-var express = require("express");
-var prices = require("./data/prices.json");
-var orders = require("./data/orders.json");
-var payments = require("./data/payments.json");
-var app = express();
+let express = require("express");
+let prices = require("./data/prices.json");
+let orders = require("./data/orders.json");
+let payments = require("./data/payments.json");
+let app = express();
 
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
