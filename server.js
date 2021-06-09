@@ -1,8 +1,8 @@
-let express = require("express");
-let prices = require("./data/prices.json");
-let orders = require("./data/orders.json");
-let payments = require("./data/payments.json");
-let app = express();
+const express = require("express");
+const prices = require("./data/prices.json");
+const orders = require("./data/orders.json");
+const payments = require("./data/payments.json");
+const app = express();
 
 /**
  * creating the node.js based express web application backend server
