@@ -53,9 +53,9 @@
     <!-- To display the Barista coffee content and with nice background image  -->
     <div class="menu container">
       <div class="header-coffee">
-        <span class="label-hero">Think coffee</span>
+        <span class="label-hero">Coffee matters</span>
         <div class="inline-img">
-          <img src="../assets/background.jpeg" class="hero-img" />
+          <img src="../assets/Humanity_runs_on_coffee.png" class="hero-img" />
         </div>
       </div>
       <div class="header">
@@ -146,17 +146,9 @@ a.navbar-item:hover {
   width: 100%;
 
   .header-coffee {
-    position: relative;
-    overflow: hidden;
-    height: 220px;
-    background-color: #00d1b2;
-    display: flex;
     color: #fff;
-    font-size: 27px;
+    font-size: 20px;
     font-weight: 700;
-    display: flex;
-    align-items: center;
-    width: 100%;
 
     .label-hero {
       position: absolute;
